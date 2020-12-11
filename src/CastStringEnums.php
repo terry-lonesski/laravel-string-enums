@@ -73,7 +73,7 @@ trait CastStringEnums
         if ($this->casts === null) {
             return false;
         }
-        if (isset($this->casts[$key]) && !$this->casts[$key] instanceof StringEnum) {
+        if (isset($this->casts[$key]) && !is_subclass_of($this->casts[$key], StringEnum::class)) {
             return false;
         }
 

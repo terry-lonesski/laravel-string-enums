@@ -11,8 +11,11 @@ class StringEnum extends Enum
         return $this->key;
     }
 
-    public function __toString(): string
+    public static function parseDatabase($value)
     {
-        return $this->key;
+        if (self::hasKey($value)) {
+            return self::fromKey($value)->value;
+        }
+        return parent::parseDatabase($value);
     }
 }

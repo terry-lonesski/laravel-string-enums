@@ -73,6 +73,9 @@ trait CastStringEnums
         if ($this->casts === null) {
             return false;
         }
+        if (isset($this->casts[$key]) && !$this->casts[$key] instanceof StringEnum) {
+            return false;
+        }
 
         return array_key_exists($key, $this->casts);
     }

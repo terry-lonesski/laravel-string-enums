@@ -1,7 +1,7 @@
 {
     "name": "terry-lonesski/laravel-string-enums",
-    "description": ":package_description",
-    "license": "license",
+    "description": "String Enums for Laravel",
+    "license": "MIT",
     "authors": [
         {
             "name": "Terry Lonesski",
